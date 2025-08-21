@@ -9,7 +9,7 @@ empleados = ["Julian","Juan"]
 #config page
 
 st.set_page_config(page_title='App de citas',page_icon='✂',layout='centered')
-st.image("assets/barberia.jpg")
+st.image("barberia.jpg")
 st.title("Barberia de barrio")
 st.text("Calle Abrebaredo,n5,Málaga")
 
@@ -18,20 +18,20 @@ selected = option_menu(menu_title= None,options= ["Servicios","Reseñas","Portaf
                        orientation= "horizontal",)
 
 if selected == "Portafolio":
-    st.image("assets/corte1.jpeg", caption= "Degradado básico")
-    st.image("assets/corte1.jpeg", caption= "Corte más barba")
-    st.image("assets/corte1.jpeg", caption= "Raya personalizada")
-    st.image("assets/corte1.jpeg", caption= "Afeitado personalizado")
-    st.image("assets/corte1.jpeg", caption= "Corte tupe")
+    st.image("corte1.jpeg", caption= "Degradado básico")
+    st.image("corte1.jpeg", caption= "Corte más barba")
+    st.image("corte1.jpeg", caption= "Raya personalizada")
+    st.image("corte1.jpeg", caption= "Afeitado personalizado")
+    st.image("corte1.jpeg", caption= "Corte tupe")
 
 if selected == "Detalles":
-    st.image("assets/map.JPG")
+    st.image("map.JPG")
     st.markdown(f"Pulsa [aquí] (www.google.com) para ver la direccion en Google Maps.")
 
     st.subheader("Empleados")
     column1,column2 = st.columns(2)
-    column1.image("assets/barber1.png", caption='Julian')
-    column2.image("assets/barber1.png", caption='Juan')
+    column1.image("barber1.png", caption='Julian')
+    column2.image("barber1.png", caption='Juan')
 
     st.subheader("Horarios de apertura y contacto")
     st.write("---")
@@ -58,10 +58,10 @@ if selected == "Detalles":
     st.markdown("📷[Instagram](www.instagram.com)")
 
 if selected == "Reseñas":
-    st.image("assets/opinion1.JPG")
-    st.image("assets/opinion1.JPG")
-    st.image("assets/opinion1.JPG")
-    st.image("assets/opinion1.JPG")
+    st.image("opinion1.JPG")
+    st.image("opinion1.JPG")
+    st.image("opinion1.JPG")
+    st.image("opinion1.JPG")
 
 if selected == "Servicios":
     st.subheader("Reserva tu cita")
@@ -73,5 +73,6 @@ if selected == "Servicios":
     servicio = a1.selectbox("Servicio",servicios)
     empleado = a2.selectbox("Empleados",empleados)
     nota = a1.text_area("💬Nota (opcional)")
+
 
     enviar = st.button("Enviar")
